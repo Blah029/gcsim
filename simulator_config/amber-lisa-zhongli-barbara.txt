@@ -1,0 +1,33 @@
+amber char lvl=70/70 cons=0 talent=6,6,6;
+amber add weapon="skywardharp" refine=1 lvl=80/80;
+amber add set="wandererstroupe" count=4;
+amber add stats def%=0.168 def=103 hp=4467 hp%=0.126 atk=284 atk%=0.735 er=0.24400000000000002 em=59 cr=0.148 cd=0.8300000000000001;
+
+lisa char lvl=70/70 cons=1 talent=6,2,6;
+lisa add weapon="magicguide" refine=5 lvl=80/80;
+lisa add set="theexile" count=2;
+lisa add set="instructor" count=2;
+lisa add stats def%=0.073 def=19 hp=4785 hp%=0.192 atk=239 atk%=0.116 er=0.508 em=350.1 cr=0.10700000000000001 cd=0.098;
+
+zhongli char lvl=70/70 cons=1 talent=6,6,6;
+zhongli add weapon="blacktassel" refine=5 lvl=80/80;
+zhongli add set="tenacityofthemillelith" count=4;
+zhongli add stats def%=0.053 def=94 hp=3947 hp%=0.46699999999999997 atk=270 atk%=0.428 er=0.394 em=84 cr=0.116 cd=0.187 geo%=0.387;
+
+barbara char lvl=70/70 cons=1 talent=6,6,6;
+barbara add weapon="emeraldorb" refine=5 lvl=80/80;
+barbara add set="gladiatorsfinale" count=2;
+barbara add set="tenacityofthemillelith" count=2;
+barbara add stats def%=0.22599999999999998 def=121 hp=4744 hp%=0.521 atk=356 atk%=0.303 er=0.103 em=86 cr=0.062 heal=0.298 hydro%=0.387;
+
+options iteration=1000 duration=90 swap_delay=30;
+target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
+
+active amber;
+
+while 1 {
+  amber aim[weakspot=1,travel=5];
+  lisa attack:4;
+}
+
+# average dps = 4,229

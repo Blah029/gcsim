@@ -1,6 +1,3 @@
-options iteration=1000 duration=90 swap_delay=30;
-target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
-
 raiden char lvl=70/70 cons=0 talent=6,6,6;
 raiden add weapon="thecatch" refine=1 lvl=80/80;
 raiden add set="gladiatorsfinale" count=2;
@@ -23,6 +20,9 @@ bennett char lvl=70/70 cons=0 talent=1,6,6;
 bennett add weapon="favoniussword" refine=1 lvl=80/80;
 bennett add set="noblesseoblige" count=4;
 bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
+
+options iteration=1000 duration=90 swap_delay=30;
+target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
 
 active raiden;
 
@@ -52,12 +52,6 @@ while 1 {
   if .raiden.burst.ready {
     raiden burst;
   }
-  let i = 0;
-  while  i<3 {
-    raiden attack:3;
-    raiden charge;
-    i = i+1;
-  }
-  raiden attack;
-  raiden charge;
+  raiden attack:3, charge, attack:3, charge, attack:3, charge;
+  raiden attack, charge;
 }
