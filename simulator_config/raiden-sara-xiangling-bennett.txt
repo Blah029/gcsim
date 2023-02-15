@@ -1,0 +1,63 @@
+options iteration=1000 duration=90 swap_delay=30;
+target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
+
+raiden char lvl=70/70 cons=0 talent=6,6,6;
+raiden add weapon="thecatch" refine=1 lvl=80/80;
+raiden add set="gladiatorsfinale" count=2;
+raiden add set="berserker" count=2;
+raiden add stats def=56 hp=4599 hp%=0.13 atk=320 atk%=0.34800000000000003 er=0.666 em=15 cr=0.335 cd=0.044000000000000004 electro%=0.387;
+
+sara char lvl=70/70 cons=6 talent=1,6,6;
+sara add weapon="favoniuswarbow" refine=2 lvl=80/80;
+sara add set="gladiatorsfinale" count=2;
+sara add set="theexile" count=2;
+sara add stats def=100 hp=4182 hp%=0.23700000000000004 atk=316 atk%=0.84 er=0.23 em=85 cr=0.163 cd=0.132 electro%=0.348;
+
+xiangling char lvl=70/70 cons=1 talent=1,6,6;
+xiangling add weapon="missivewindspear" refine=5 lvl=80/80;
+xiangling add set="gladiatorsfinale" count=2;
+xiangling add set="wandererstroupe" count=2;
+xiangling add stats def=122 hp=5467 hp%=0.252 atk=288 atk%=0.348 er=0.749 em=51 cr=0.148 cd=0.078 pyro%=0.348;
+
+bennett char lvl=70/70 cons=0 talent=1,6,6;
+bennett add weapon="favoniussword" refine=1 lvl=80/80;
+bennett add set="noblesseoblige" count=4;
+bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
+
+active raiden;
+
+while 1 {
+  if .raiden.skill.ready {
+    raiden skill;
+  }
+  if .bennett.skill.ready {
+    bennett skill;
+  }
+  if .bennett.burst.ready {
+    bennett burst;
+  }
+  if .xiangling.skill.ready {
+    xiangling skill;
+  }
+  if .xiangling.burst.ready {
+    xiangling burst;
+  }
+  if .sara.burst.ready {
+    sara burst;
+  } else {
+    if .sara.skill.ready {
+      sara skill;
+    }
+  }
+  if .raiden.burst.ready {
+    raiden burst;
+  }
+  let i = 0;
+  while  i<3 {
+    raiden attack:3;
+    raiden charge;
+    i = i+1;
+  }
+  raiden attack;
+  raiden charge;
+}
