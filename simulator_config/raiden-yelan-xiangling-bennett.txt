@@ -4,16 +4,15 @@ raiden add set="gladiatorsfinale" count=2;
 raiden add set="berserker" count=2;
 raiden add stats def=56 hp=4599 hp%=0.13 atk=320 atk%=0.34800000000000003 er=0.666 em=15 cr=0.335 cd=0.044000000000000004 electro%=0.387;
 
-sara char lvl=70/70 cons=6 talent=1,6,6;
-sara add weapon="favoniuswarbow" refine=2 lvl=80/80;
-sara add set="gladiatorsfinale" count=2;
-sara add set="theexile" count=2;
-sara add stats def=100 hp=4182 hp%=0.23700000000000004 atk=316 atk%=0.84 er=0.23 em=85 cr=0.163 cd=0.132 electro%=0.348;
+yelan char lvl=70/70 cons=1 talent=1,6,6;
+yelan add weapon="favoniuswarbow" refine=2 lvl=80/80;
+yelan add set="emblemofseveredfate" count=4;
+yelan add stats def%=0.44499999999999995 def=150 hp=4445 hp%=0.5740000000000001 atk=258 er=0.239 em=60 cr=0.324 cd=0.10800000000000001 hydro%=0.387;
 
 xiangling char lvl=70/70 cons=1 talent=1,6,6;
 xiangling add weapon="missivewindspear" refine=5 lvl=80/80;
-xiangling add set="gladiatorsfinale" count=2;
 xiangling add set="wandererstroupe" count=2;
+xiangling add set="gladiatorsfinale" count=2;
 xiangling add stats def=122 hp=5467 hp%=0.252 atk=288 atk%=0.348 er=0.749 em=51 cr=0.148 cd=0.078 pyro%=0.348;
 
 bennett char lvl=70/70 cons=0 talent=1,6,6;
@@ -27,7 +26,7 @@ target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
 active raiden;
 
 while 1 {
-  if .raiden.burst.ready && .sara.burst.ready && .xiangling.burst.ready && .bennett.burst.ready {
+  if .raiden.burst.ready && .yelan.burst.ready && .xiangling.burst.ready && .bennett.burst.ready {
     if .raiden.skill.ready {
       raiden skill;
     }
@@ -39,13 +38,13 @@ while 1 {
       xiangling skill;
     }
     xiangling burst;
-    #if .sara.skill.ready {
-    #  sara skill;
-    #}
-    sara burst;
+    if .yelan.skill.ready {
+      yelan skill;
+    }
+    yelan burst;
     raiden burst;
     raiden attack:3, charge, attack:3, charge, attack:3, charge;
-    raiden attack, charge;
+    raiden attack:6;
   }
   else {
     if .raiden.skill.ready {
@@ -57,11 +56,12 @@ while 1 {
     if .xiangling.skill.ready {
       xiangling skill;
     }
-    if .sara.skill.ready {
-      sara skill;
+    if .yelan.skill.ready {
+      yelan skill;
     }
     raiden attack:4;
   }
 }
 
-# average DPS: 7580
+# average DPS: 10,223
+# yelan using imaginary artefacts
