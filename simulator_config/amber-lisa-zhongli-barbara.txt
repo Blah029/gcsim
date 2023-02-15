@@ -30,4 +30,4 @@ while 1 {
   lisa attack:4;
 }
 
-# average dps = 4,229
+# average DPS: 4,229

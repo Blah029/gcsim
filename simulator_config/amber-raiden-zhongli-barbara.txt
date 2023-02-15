@@ -30,4 +30,4 @@ while 1 {
   amber aim[weakspot=1,travel=5]:15;
 }
 
-# averags dps = 3,911
+# average DPS: 3,911
