@@ -20,12 +20,12 @@ bennett add weapon="favoniussword" refine=1 lvl=80/80;
 bennett add set="noblesseoblige" count=4;
 bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
 
-options iteration=1000 duration=90 swap_delay=30;
-target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
+options iteration=1000 swap_delay=30;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1;
 
 active raiden;
 
-while 1 {
+for let i = 15; i > 0; {
   if .raiden.burst.ready && .yelan.burst.ready && .xiangling.burst.ready && .bennett.burst.ready {
     if .raiden.skill.ready {
       raiden skill;
@@ -45,6 +45,7 @@ while 1 {
     raiden burst;
     raiden attack:3, charge, attack:3, charge, attack:3, charge;
     raiden attack:6;
+    i = i - 2;
   }
   else {
     if .raiden.skill.ready {
@@ -59,9 +60,10 @@ while 1 {
     if .yelan.skill.ready {
       yelan skill;
     }
-    raiden attack:4;
+    raiden attack:1;
+    i = i - 1;
   }
 }
 
-# average DPS: 10,223
+# average DPS: 10,751
 # yelan using imaginary artefacts

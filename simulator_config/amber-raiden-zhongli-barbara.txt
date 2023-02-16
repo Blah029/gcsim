@@ -20,14 +20,15 @@ barbara add set="gladiatorsfinale" count=2;
 barbara add set="tenacityofthemillelith" count=2;
 barbara add stats def%=0.22599999999999998 def=121 hp=4744 hp%=0.521 atk=356 atk%=0.303 er=0.103 em=86 cr=0.062 heal=0.298 hydro%=0.387;
 
-options iteration=1000 duration=90 swap_delay=30;
-target lvl=100 resist=0.1 particle_threshold=250000 particle_drop_count=1;
+options iteration=1000 swap_delay=30;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1;
 
 active amber;
 
-while 1 {
+for let i = 15; i > 0; {
   raiden skill;
   amber aim[weakspot=1,travel=5]:15;
+  i = i - 1.5;
 }
 
-# average DPS: 3,911
+# average DPS: 4,212
