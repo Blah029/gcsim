@@ -10,7 +10,7 @@ yelan add set="emblemofseveredfate" count=4;
 yelan add stats def%=0.44499999999999995 def=150 hp=4445 hp%=0.5740000000000001 atk=258 er=0.239 em=60 cr=0.324 cd=0.10800000000000001 hydro%=0.387;
 
 xiangling char lvl=70/70 cons=1 talent=1,6,6;
-xiangling add weapon="missivewindspear" refine=5 lvl=80/80;
+xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
 xiangling add set="wandererstroupe" count=2;
 xiangling add set="gladiatorsfinale" count=2;
 xiangling add stats def=122 hp=5467 hp%=0.252 atk=288 atk%=0.348 er=0.749 em=51 cr=0.148 cd=0.078 pyro%=0.348;
@@ -21,7 +21,7 @@ bennett add set="noblesseoblige" count=4;
 bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
 
 options iteration=1000 swap_delay=30;
-target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
 
 active raiden;
 
@@ -65,5 +65,5 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS: 10,751
+# average DPS: 11,126
 # yelan using imaginary artefacts

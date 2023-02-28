@@ -21,14 +21,17 @@ barbara add set="tenacityofthemillelith" count=2;
 barbara add stats def%=0.22599999999999998 def=121 hp=4744 hp%=0.521 atk=356 atk%=0.303 er=0.103 em=86 cr=0.062 heal=0.298 hydro%=0.387;
 
 options iteration=1000 swap_delay=30;
-target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
 
 active amber;
 
 for let i = 15; i > 0; {
   raiden skill;
-  amber aim[weakspot=1,travel=5]:15;
-  i = i - 1.5;
+  amber dash, aim[weakspot=1,travel=5];
+  while .raiden.status.raiden-e {
+    amber dash, aim[weakspot=1,travel=20];
+  }
+  i = i - 2;
 }
 
-# average DPS: 4,212
+# average DPS: 3,396

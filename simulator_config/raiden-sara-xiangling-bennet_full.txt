@@ -11,7 +11,7 @@ sara add set="theexile" count=2;
 sara add stats def=100 hp=4182 hp%=0.23700000000000004 atk=316 atk%=0.84 er=0.23 em=85 cr=0.163 cd=0.132 electro%=0.348;
 
 xiangling char lvl=70/70 cons=1 talent=1,6,6;
-xiangling add weapon="missivewindspear" refine=5 lvl=80/80;
+xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
 xiangling add set="gladiatorsfinale" count=2;
 xiangling add set="wandererstroupe" count=2;
 xiangling add stats def=122 hp=5467 hp%=0.252 atk=288 atk%=0.348 er=0.749 em=51 cr=0.148 cd=0.078 pyro%=0.348;
@@ -22,7 +22,7 @@ bennett add set="noblesseoblige" count=4;
 bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
 
 options iteration=1000 swap_delay=30;
-target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
 
 active raiden;
 
@@ -39,31 +39,28 @@ for let i = 15; i > 0; {
       xiangling skill;
     }
     xiangling burst;
-    #if .sara.skill.ready {
-    #  sara skill;
-    #}
     sara burst;
     raiden burst;
     raiden attack:3, charge, attack:3, charge, attack:3, charge;
     raiden attack, charge;
     i = i - 2;
+    
   }
-  else {
-    if .raiden.skill.ready {
+  else if .raiden.skill.ready && .bennett.skill.ready && .xiangling.skill.ready && .sara.skill.ready {
+    raiden skill;
+    bennett skill;
+    xiangling skill;
+    sara skill;
+    raiden attack:3;
+    i = i - 1;
+  }
+  else  {
+    if !.raiden.status.raiden-e {
       raiden skill;
     }
-    if .bennett.skill.ready {
-      bennett skill;
-    }
-    if .xiangling.skill.ready {
-      xiangling skill;
-    }
-    if .sara.skill.ready {
-      sara skill;
-    }
-    raiden attack:5;
-    i = i - 1;
+    raiden attack:3;
+    i = i - 0.5;
   }
 }
 
-# average DPS: 8,229
+# average DPS: 9,512
