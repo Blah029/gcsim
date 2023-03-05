@@ -27,7 +27,8 @@ target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_c
 active raiden;
 
 for let i = 15; i > 0; {
-  if .raiden.burst.ready && .sara.burst.ready && .xiangling.burst.ready && .bennett.burst.ready {
+  # check for all bursts. keep removing the check for the last used burst untill the sim crashes.
+  if .xiangling.burst.ready && .bennett.burst.ready {
     if .raiden.skill.ready {
       raiden skill;
     }
@@ -39,6 +40,10 @@ for let i = 15; i > 0; {
       xiangling skill;
     }
     xiangling burst;
+    if .sara.skill.ready {
+      sara skill;
+      sara aim;
+    }
     sara burst;
     raiden burst;
     raiden attack:3, charge, attack:3, charge, attack:3, charge;
@@ -46,11 +51,13 @@ for let i = 15; i > 0; {
     i = i - 2;
     
   }
-  else if .raiden.skill.ready && .bennett.skill.ready && .xiangling.skill.ready && .sara.skill.ready {
+  # check for all skills. keep removing the check for the last used skill untill the dps reduce noticably.
+  else if .xiangling.skill.ready && .bennett.skill.ready && .raiden.skill.ready {
     raiden skill;
     bennett skill;
     xiangling skill;
     sara skill;
+    sara aim;
     raiden attack:3;
     i = i - 1;
   }
@@ -63,4 +70,4 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS: 9,512
+# average DPS: 10,120
