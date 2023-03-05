@@ -27,7 +27,8 @@ target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_c
 active raiden;
 
 for let i = 15; i > 0; {
-  # check for all bursts. keep removing the check for the last used burst untill the sim crashes.
+  # check for all bursts. keep removing the check for the last used burst 
+  # untill the sim crashes.
   if .xiangling.burst.ready && .bennett.burst.ready {
     if .raiden.skill.ready {
       raiden skill;
@@ -51,7 +52,8 @@ for let i = 15; i > 0; {
     i = i - 2;
     
   }
-  # check for all skills. keep removing the check for the last used skill untill the dps reduce noticably.
+  # check for all skills. keep removing the check for the last used skill 
+  # untill the dps reduce noticably.
   else if .xiangling.skill.ready && .bennett.skill.ready && .raiden.skill.ready {
     raiden skill;
     bennett skill;

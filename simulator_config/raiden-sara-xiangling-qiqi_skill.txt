@@ -28,7 +28,8 @@ target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_c
 active raiden;
 
 for let i = 15; i > 0; {
-  # check for all skills. keep removing the check for the last used skill untill the dps reduce noticably.
+  # check for all skills. keep removing the check for the last used skill 
+  # untill the dps reduces noticably.
   if .xiangling.skill.ready {
     if .qiqi.skill.ready {
       qiqi skill;
