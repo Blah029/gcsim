@@ -1,28 +1,25 @@
 amber char lvl=70/70 cons=0 talent=6,6,6;
-amber add weapon="skywardharp" refine=1 lvl=80/80;
+amber add weapon="prototypecrescent" refine=1 lvl=80/80;
 amber add set="wandererstroupe" count=4;
-amber add stats def%=0.168 def=103 hp=4467 hp%=0.126 atk=284 atk%=0.735 er=0.24400000000000002 em=59 cr=0.148 cd=0.8300000000000001;
+amber add stats def%=0.057999999999999996 def=44 hp=4945 hp%=0.239 atk=270 atk%=0.387 er=0.37300000000000005 em=97 cr=0.031 cd=0.982 pyro%=0.348;
 
 raiden char lvl=70/70 cons=0 talent=6,6,6;
-raiden add weapon="thecatch" refine=1 lvl=80/80;
-raiden add set="gladiatorsfinale" count=2;
-raiden add set="berserker" count=2;
-raiden add stats def=56 hp=4599 hp%=0.13 atk=320 atk%=0.34800000000000003 er=0.666 em=15 cr=0.335 cd=0.044000000000000004 electro%=0.387;
+raiden add weapon="thecatch" refine=5 lvl=80/80;
+raiden add set="emblemofseveredfate" count=4;
+raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.6419999999999999 er=0.8610000000000001 em=16 cr=0.47 cd=0.319 electro%=0.466;
 
 zhongli char lvl=70/70 cons=1 talent=6,6,6;
 zhongli add weapon="blacktassel" refine=5 lvl=80/80;
 zhongli add set="tenacityofthemillelith" count=4;
-zhongli add stats def%=0.053 def=94 hp=3947 hp%=0.46699999999999997 atk=270 atk%=0.428 er=0.394 em=84 cr=0.116 cd=0.187 geo%=0.387;
+zhongli add stats def%=0.053 def=70 hp=4851 hp%=0.482 atk=279 atk%=0.08199999999999999 er=0.734 em=85 cr=0.089 cd=0.187 geo%=0.387;
 
 barbara char lvl=70/70 cons=1 talent=6,6,6;
 barbara add weapon="emeraldorb" refine=5 lvl=80/80;
 barbara add set="gladiatorsfinale" count=2;
-barbara add set="tenacityofthemillelith" count=2;
-barbara add stats def%=0.22599999999999998 def=121 hp=4744 hp%=0.521 atk=356 atk%=0.303 er=0.103 em=86 cr=0.062 heal=0.298 hydro%=0.387;
+barbara add stats def%=0.22599999999999998 def=101 hp=4796 hp%=0.387 atk=344 atk%=0.278 er=0.11 em=80 cr=0.11699999999999999 heal=0.298 hydro%=0.387;
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
-
 active amber;
 
 for let i = 15; i > 0; {
@@ -34,4 +31,4 @@ for let i = 15; i > 0; {
   i = i - 2;
 }
 
-# average DPS: 3,396
+# average DPS: 3,750

@@ -1,0 +1,42 @@
+raiden char lvl=70/70 cons=0 talent=6,6,6;
+raiden add weapon="thecatch" refine=5 lvl=80/80;
+raiden add set="emblemofseveredfate" count=4;
+raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.6419999999999999 er=0.8610000000000001 em=16 cr=0.47 cd=0.319 electro%=0.466;
+
+sara char lvl=70/70 cons=6 talent=1,6,6;
+sara add weapon="favoniuswarbow" refine=2 lvl=80/80;
+sara add set="gladiatorsfinale" count=2;
+sara add set="berserker" count=2;
+sara add stats def=74 hp=4995 hp%=0.2 atk=297 atk%=0.07500000000000001 er=0.725 em=16 cr=0.405 cd=0.254 electro%=0.387;
+
+xiangling char lvl=70/70 cons=1 talent=1,6,6;
+xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
+xiangling add set="gladiatorsfinale" count=2;
+xiangling add set="wandererstroupe" count=2;
+xiangling add stats def=100 hp=4606 hp%=0.301 atk=318 atk%=0.945 er=0.134 em=87 cr=0.202 pyro%=0.348;
+
+bennett char lvl=70/70 cons=1 talent=1,6,6;
+bennett add weapon="favoniussword" refine=1 lvl=80/80;
+bennett add set="noblesseoblige" count=4;
+bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
+
+options iteration=1000 swap_delay=30;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
+
+active raiden;
+
+for let i = 15; i > 0; {
+  # check for all skills. keep removing the check for the last used skill 
+  # untill the dps reduces noticably.
+  if .xiangling.skill.ready {
+    bennett skill;
+    xiangling skill;
+    sara skill;
+    sara aim;
+    raiden skill;
+    }
+  raiden attack:4, charge;
+i = i - 1;
+}
+
+# average DPS: 4,800

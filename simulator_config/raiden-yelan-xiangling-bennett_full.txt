@@ -1,21 +1,20 @@
 raiden char lvl=70/70 cons=0 talent=6,6,6;
-raiden add weapon="thecatch" refine=1 lvl=80/80;
-raiden add set="gladiatorsfinale" count=2;
-raiden add set="berserker" count=2;
-raiden add stats def=56 hp=4599 hp%=0.13 atk=320 atk%=0.34800000000000003 er=0.666 em=15 cr=0.335 cd=0.044000000000000004 electro%=0.387;
+raiden add weapon="thecatch" refine=5 lvl=80/80;
+raiden add set="emblemofseveredfate" count=4;
+raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.6419999999999999 er=0.8610000000000001 em=16 cr=0.47 cd=0.319 electro%=0.466;
 
-yelan char lvl=70/80 cons=1 talent=1,6,6;
-yelan add weapon="favoniuswarbow" refine=2 lvl=80/80;
+yelan char lvl=70/70 cons=1 talent=1,6,6;
+yelan add weapon="recurvebow" refine=2 lvl=80/80;
 yelan add set="emblemofseveredfate" count=4;
-yelan add stats def%=0.139 def=38 hp=4684 hp%=0.796 atk=258 er=0.344 em=117 cr=0.35900000000000004 cd=0.311 hydro%=0.387;
+yelan add stats def%=0.19 def=78 hp=5497 hp%=0.8750000000000001 atk=311 er=0.395 em=140 cr=0.41200000000000003 cd=0.311 hydro%=0.466;
 
 xiangling char lvl=70/70 cons=1 talent=1,6,6;
 xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
-xiangling add set="gladiatorsfinale" count=2;
 xiangling add set="wandererstroupe" count=2;
-xiangling add stats def=122 hp=5467 hp%=0.252 atk=288 atk%=0.348 er=0.749 em=51 cr=0.148 cd=0.078 pyro%=0.348;
+xiangling add set="gladiatorsfinale" count=2;
+xiangling add stats def=100 hp=4606 hp%=0.301 atk=318 atk%=0.945 er=0.134 em=87 cr=0.202 pyro%=0.348;
 
-bennett char lvl=70/70 cons=0 talent=1,6,6;
+bennett char lvl=70/70 cons=1 talent=1,6,6;
 bennett add weapon="favoniussword" refine=1 lvl=80/80;
 bennett add set="noblesseoblige" count=4;
 bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
@@ -75,4 +74,4 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS: 11,710
+# average DPS: 12,770
