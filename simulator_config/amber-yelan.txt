@@ -1,0 +1,44 @@
+amber char lvl=70/70 cons=0 talent=6,6,6;
+amber add weapon="prototypecrescent" refine=1 lvl=80/80;
+amber add set="wandererstroupe" count=4;
+amber add stats def%=0.057999999999999996 def=44 hp=4945 hp%=0.239 atk=270 atk%=0.387 er=0.37300000000000005 em=97 cr=0.031 cd=0.982 pyro%=0.348;
+
+yelan char lvl=70/70 cons=1 talent=1,6,6;
+yelan add weapon="recurvebow" refine=2 lvl=80/80;
+yelan add set="emblemofseveredfate" count=4;
+yelan add stats def%=0.19 def=78 hp=5497 hp%=0.8750000000000001 atk=311 er=0.395 em=140 cr=0.41200000000000003 cd=0.311 hydro%=0.466;
+
+zhongli char lvl=70/70 cons=1 talent=6,6,6;
+zhongli add weapon="blacktassel" refine=5 lvl=80/80;
+zhongli add set="tenacityofthemillelith" count=4;
+zhongli add stats def%=0.053 def=70 hp=4851 hp%=0.482 atk=279 atk%=0.08199999999999999 er=0.734 em=85 cr=0.089 cd=0.187 geo%=0.387;
+
+sayu char lvl=70/70 cons=0 talent=1,6,6;
+sayu add weapon="favoniusgreatsword" refine=5 lvl=80/80;
+sayu add set="theexile" count=2;
+sayu add set="instructor" count=2;
+sayu add stats def%=0.073 def=19 hp=4785 hp%=0.192 atk=239 atk%=0.116 er=0.508 em=350.1 cr=0.10700000000000001 cd=0.098;
+
+options iteration=1000 swap_delay=30;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,-3 radius=2;
+target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,3 radius=2;
+
+active amber;
+
+for let i = 15; i > 0; {
+  set_default_target(1);
+  amber dash, aim[weakspot=1,travel=5];
+  set_default_target(2);
+  amber dash, aim[weakspot=1,travel=5];
+  set_default_target(3);
+  amber dash, aim[weakspot=1,travel=5];
+  if .yelan.skill.ready {
+    yelan dash;
+    yelan skill[marked=3];
+    yelan dash;
+    i = i - 1;
+  }
+}
+
+# average DPS: 9,420
