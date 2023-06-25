@@ -3,21 +3,20 @@ raiden add weapon="thecatch" refine=5 lvl=80/80;
 raiden add set="emblemofseveredfate" count=4;
 raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.6419999999999999 er=0.8610000000000001 em=16 cr=0.47 cd=0.319 electro%=0.466;
 
-yelan char lvl=70/70 cons=1 talent=1,6,6;
-yelan add weapon="recurvebow" refine=2 lvl=80/80;
+yelan char lvl=70/70 cons=1 talent=6,6,6;
+yelan add weapon="favoniuswarbow" refine=2 lvl=80/80;
 yelan add set="emblemofseveredfate" count=4;
 yelan add stats def%=0.19 def=78 hp=5497 hp%=0.8750000000000001 atk=311 er=0.395 em=140 cr=0.41200000000000003 cd=0.311 hydro%=0.466;
 
 xiangling char lvl=70/70 cons=1 talent=1,6,6;
 xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
-xiangling add set="wandererstroupe" count=2;
-xiangling add set="gladiatorsfinale" count=2;
-xiangling add stats def=100 hp=4606 hp%=0.301 atk=318 atk%=0.945 er=0.134 em=87 cr=0.202 pyro%=0.348;
+xiangling add set="emblemofseveredfate" count=4;
+xiangling add stats def%=0.066 def=98 hp=5527 hp%=0.099 atk=397 atk%=0.146 er=0.823 em=128 cr=0.268 cd=0.7 pyro%=0.466;
 
-bennett char lvl=70/70 cons=1 talent=1,6,6;
+bennett char lvl=70/70 cons=2 talent=1,6,6;
 bennett add weapon="favoniussword" refine=1 lvl=80/80;
 bennett add set="noblesseoblige" count=4;
-bennett add stats def%=0.109 def=56 hp=6207 hp%=0.856 atk=293 atk%=0.396 er=0.29100000000000004 em=16 cr=0.10500000000000001 cd=0.116 heal=0.298;
+bennett add stats def%=0.109 def=56 hp=7229 hp%=1.014 atk=346 atk%=0.43700000000000006 er=0.34900000000000003 em=37 cr=0.132 cd=0.116 heal=0.359;
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
@@ -48,13 +47,12 @@ for let i = 15; i > 0; {
     yelan burst;
     raiden burst;
     raiden attack:3, charge, attack:3, charge, attack:3, charge;
-    raiden attack, charge;
     i = i - 2;
     
   }
   # check for all skills. keep removing the check for the last used skill 
   # untill rotation stalls for skill in debug screen.
-  else if .xiangling.skill.ready && .bennett.skill.ready && .raiden.skill.ready {
+  else if .raiden.skill.ready {
     raiden skill;
     bennett skill;
     xiangling skill;
@@ -69,9 +67,9 @@ for let i = 15; i > 0; {
     if !.raiden.status.raiden-e {
       raiden skill;
     }
-    raiden attack:3;
+    raiden attack;
     i = i - 0.5;
   }
 }
 
-# average DPS: 12,770
+# average DPS: 18,287

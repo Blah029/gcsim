@@ -1,7 +1,7 @@
-amber char lvl=70/70 cons=0 talent=6,6,6;
-amber add weapon="skywardharp" refine=1 lvl=80/80;
+amber char lvl=70/70 cons=1 talent=6,6,6;
+amber add weapon="prototypecrescent" refine=3 lvl=80/80;
 amber add set="wandererstroupe" count=4;
-amber add stats def%=0.168 def=103 hp=4467 hp%=0.126 atk=284 atk%=0.735 er=0.24400000000000002 em=59 cr=0.148 cd=0.8300000000000001;
+amber add stats def%=0.057999999999999996 def=88 hp=5527 hp%=0.28600000000000003 atk=325 atk%=0.769 er=0.45999999999999996 em=61 cr=0.062 cd=1.298 pyro%=0.466;
 
 lisa char lvl=70/70 cons=1 talent=6,2,6;
 lisa add weapon="magicguide" refine=5 lvl=80/80;
@@ -10,14 +10,14 @@ lisa add set="instructor" count=2;
 lisa add stats def%=0.073 def=19 hp=4785 hp%=0.192 atk=239 atk%=0.116 er=0.508 em=350.1 cr=0.10700000000000001 cd=0.098;
 
 zhongli char lvl=70/70 cons=1 talent=6,6,6;
-zhongli add weapon="blacktassel" refine=5 lvl=80/80;
-zhongli add set="tenacityofthemillelith" count=4;
-zhongli add stats def%=0.053 def=94 hp=3947 hp%=0.46699999999999997 atk=270 atk%=0.428 er=0.394 em=84 cr=0.116 cd=0.187 geo%=0.387;
+zhongli add weapon="whitetassel" refine=5 lvl=80/80;
+zhongli add set="emblemofseveredfate" count=4;
+zhongli add stats def=81 hp=5079 hp%=0.624 atk=402 atk%=0.152 er=0.5960000000000001 em=37 cr=0.377 cd=0.762 geo%=0.466;
 
 barbara char lvl=70/70 cons=1 talent=6,6,6;
 barbara add weapon="emeraldorb" refine=5 lvl=80/80;
-barbara add set="gladiatorsfinale" count=2;
 barbara add set="tenacityofthemillelith" count=2;
+barbara add set="gladiatorsfinale" count=2;
 barbara add stats def%=0.22599999999999998 def=121 hp=4744 hp%=0.521 atk=356 atk%=0.303 er=0.103 em=86 cr=0.062 heal=0.298 hydro%=0.387;
 
 options iteration=1000 swap_delay=30;
@@ -26,9 +26,10 @@ target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_c
 active amber;
 
 for let i = 15; i > 0; {
-  amber dash, aim[weakspot=1,travel=20];
+  wait(0.3);
+  amber aim[weakspot=1,travel=20];
   lisa attack:4;
   i = i - 0.5;
 }
 
-# average DPS: 4,070
+# average DPS: 5,325

@@ -1,7 +1,7 @@
-amber char lvl=70/70 cons=0 talent=6,6,6;
-amber add weapon="prototypecrescent" refine=1 lvl=80/80;
+amber char lvl=70/70 cons=1 talent=6,6,6;
+amber add weapon="prototypecrescent" refine=3 lvl=80/80;
 amber add set="wandererstroupe" count=4;
-amber add stats def%=0.057999999999999996 def=44 hp=4945 hp%=0.239 atk=270 atk%=0.387 er=0.37300000000000005 em=97 cr=0.031 cd=0.982 pyro%=0.348;
+amber add stats def%=0.057999999999999996 def=88 hp=5527 hp%=0.28600000000000003 atk=325 atk%=0.769 er=0.45999999999999996 em=61 cr=0.062 cd=1.298 pyro%=0.466;
 
 raiden char lvl=70/70 cons=0 talent=6,6,6;
 raiden add weapon="thecatch" refine=5 lvl=80/80;
@@ -9,9 +9,9 @@ raiden add set="emblemofseveredfate" count=4;
 raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.6419999999999999 er=0.8610000000000001 em=16 cr=0.47 cd=0.319 electro%=0.466;
 
 zhongli char lvl=70/70 cons=1 talent=6,6,6;
-zhongli add weapon="blacktassel" refine=5 lvl=80/80;
-zhongli add set="tenacityofthemillelith" count=4;
-zhongli add stats def%=0.053 def=70 hp=4851 hp%=0.482 atk=279 atk%=0.08199999999999999 er=0.734 em=85 cr=0.089 cd=0.187 geo%=0.387;
+zhongli add weapon="whitetassel" refine=5 lvl=80/80;
+zhongli add set="emblemofseveredfate" count=4;
+zhongli add stats def=81 hp=5079 hp%=0.624 atk=402 atk%=0.152 er=0.5960000000000001 em=37 cr=0.377 cd=0.762 geo%=0.466;
 
 barbara char lvl=70/70 cons=1 talent=6,6,6;
 barbara add weapon="emeraldorb" refine=5 lvl=80/80;
@@ -24,11 +24,12 @@ active amber;
 
 for let i = 15; i > 0; {
   raiden skill;
-  amber dash, aim[weakspot=1,travel=5];
+  wait(0.3);
+  amber aim[weakspot=1,travel=5];
   while .raiden.status.raiden-e {
     amber dash, aim[weakspot=1,travel=20];
   }
   i = i - 2;
 }
 
-# average DPS: 3,750
+# average DPS: 6,229
