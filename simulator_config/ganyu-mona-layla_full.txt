@@ -6,33 +6,32 @@ ganyu add stats def%=0.336 def=53 hp=6662 hp%=0.053 atk=377 atk%=0.553 er=0.369 
 mona char lvl=70/70 cons=0 talent=1,6,6;
 mona add weapon="thrillingtalesofdragonslayers" refine=5 lvl=80/80;
 mona add set="emblemofseveredfate" count=4;
-mona add stats def%=0.40900000000000003 def=39 hp=6274 hp%=0.09300000000000001 atk=360 atk%=1.095 er=0.25899999999999995 em=119 cr=0.27599999999999997 cd=0.07 hydro%=0.466;
+mona add stats def%=0.40900000000000003 def=39 hp=6274 hp%=0.09300000000000001 atk=360 atk%=1.095 er=0.25899999999999995 em=119 cr=0.276 cd=0.07 hydro%=0.466;
 
-layla char lvl=70/70 cons=1 talent=1,6,6;
+layla char lvl=70/70 cons=2 talent=1,6,6;
 layla add weapon="harbingerofdawn" refine=5 lvl=80/80;
-layla add set="tenacityofthemillelith" count=2;
-layla add set="wandererstroupe" count=2;
-layla add stats def%=0.053 def=83 hp=6034 hp%=0.482 atk=281 atk%=0.12 er=0.604 em=51 cr=0.42799999999999994 cd=0.087;
+layla add set="tenacityofthemillelith" count=4;
+layla add stats def=60 hp=6692 hp%=0.8160000000000001 atk=400 atk%=0.08199999999999999 er=0.323 em=21 cr=0.548 cd=0.07 cryo%=0.466;
 
-sayu char lvl=70/70 cons=0 talent=1,6,6;
+sayu char lvl=70/70 cons=1 talent=1,6,6;
 sayu add weapon="favoniusgreatsword" refine=2 lvl=80/80;
-sayu add set="theexile" count=2;
-sayu add set="instructor" count=2;
-sayu add stats def%=0.073 def=19 hp=4785 hp%=0.192 atk=239 atk%=0.116 er=0.508 em=350.1 cr=0.10700000000000001 cd=0.098;
+sayu add set="viridescentvenerer" count=4;
+sayu add stats def%=0.16399999999999998 def=77 hp=5198 hp%=0.17700000000000002 atk=311 atk%=1.037 er=0.265 em=409.8 cr=0.058 cd=0.225;
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
 
 active ganyu;
+ganyu skill;
 
-for let i = 15; i > 0; {
+for let i = 20; i > 0; {
   # check for all bursts. keep removing the check for the last used burst 
   # untill the sim crashes.
-  if .mona.burst.ready && .layla.burst.ready {
-    #if .sayu.skill.ready {
-    #  sayu skill[short_hold=1];
-    #}
-    #sayu burst;
+  if .sayu.burst.ready {
+    if .sayu.skill.ready {
+      sayu skill[short_hold=1];
+    }
+    sayu burst;
     if .layla.skill.ready {
       layla skill;
     }
@@ -51,10 +50,10 @@ for let i = 15; i > 0; {
   # check for all skills. keep removing the check for the last used skill 
   # untill rotation stalls for skill in debug screen.
   else if .layla.skill.ready {
-    #sayu skill[short_hold=1];
-    #while !.layla.swap.ready {
-    #  sayu attack;
-    #}
+    sayu skill[short_hold=1];
+    while !.layla.swap.ready {
+      sayu attack;
+    }
     layla skill;
     while !.mona.swap.ready {
       layla attack;
@@ -72,4 +71,4 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS = 11,799
+# average DPS = 12,500
