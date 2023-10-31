@@ -16,7 +16,7 @@ layla add stats def=60 hp=6692 hp%=0.8160000000000001 atk=400 atk%=0.08199999999
 sayu char lvl=70/70 cons=1 talent=1,6,6;
 sayu add weapon="favoniusgreatsword" refine=2 lvl=80/80;
 sayu add set="viridescentvenerer" count=4;
-sayu add stats def%=0.16399999999999998 def=77 hp=5198 hp%=0.17700000000000002 atk=311 atk%=1.037 er=0.265 em=409.8 cr=0.058 cd=0.225;
+sayu add stats def%=0.16399999999999998 def=112 hp=4989 hp%=0.084 atk=330 atk%=0.5599999999999999 er=0.556 em=559.3 cr=0.058;
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
@@ -27,7 +27,7 @@ ganyu skill;
 for let i = 20; i > 0; {
   # check for all bursts. keep removing the check for the last used burst 
   # untill the sim crashes.
-  if .sayu.burst.ready {
+  if .mona.burst.ready {
     if .sayu.skill.ready {
       sayu skill[short_hold=1];
     }
