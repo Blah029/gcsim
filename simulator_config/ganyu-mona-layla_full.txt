@@ -66,7 +66,7 @@ for let i = 20; i > 0; {
     i = i - 1;
   }
   while !.layla.skill.ready {
-    ganyu aim[weakspot=1,travel=20];
+    ganyu aim;
     i = i - 0.5;
   }
 }

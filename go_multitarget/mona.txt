@@ -1,0 +1,1 @@
+{"name":"Skill Burst gcsim  Rotation","targets":[{"weight":4,"path":["skill","dot"],"hitMode":"avgHit","bonusStats":{}},{"weight":1,"path":["skill","dmg"],"hitMode":"avgHit","bonusStats":{}},{"weight":1,"path":["passive1","dmg"],"hitMode":"avgHit","bonusStats":{}}]}
