@@ -1,0 +1,1 @@
+{"name":"2Skill Burst gcsim","targets":[{"weight":2,"path":["skill","dmg"],"hitMode":"avgHit","reaction":"vaporize","bonusStats":{}},{"weight":1,"path":["burst","pressDmg"],"hitMode":"avgHit","bonusStats":{}},{"weight":18,"path":["burst","throwDmg"],"hitMode":"avgHit","bonusStats":{}},{"weight":3,"path":["reaction","electrocharged"],"hitMode":"avgHit","bonusStats":{}}]}
