@@ -6,7 +6,7 @@ ganyu add stats def%=0.336 def=53 hp=6662 hp%=0.053 atk=377 atk%=0.553 er=0.369 
 mona char lvl=70/70 cons=0 talent=1,6,6;
 mona add weapon="thrillingtalesofdragonslayers" refine=5 lvl=80/80;
 mona add set="noblesseoblige" count=4;
-mona add stats def%=0.19 def=123 hp=5766 hp%=0.192 atk=398 atk%=0.8680000000000001 er=0.382 cr=0.412 cd=0.20199999999999999 hydro%=0.466;
+mona add stats def%=0.19 def=123 hp=5766 hp%=0.14600000000000002 atk=365 atk%=0.9200000000000002 er=0.5569999999999999 cr=0.311 cd=0.357 hydro%=0.466;
 
 layla char lvl=70/70 cons=2 talent=1,6,6;
 layla add weapon="harbingerofdawn" refine=5 lvl=80/80;
@@ -17,7 +17,6 @@ sayu char lvl=70/70 cons=1 talent=1,6,6;
 sayu add weapon="favoniusgreatsword" refine=2 lvl=80/80;
 sayu add set="viridescentvenerer" count=4;
 sayu add stats def%=0.11699999999999999 def=93 hp=5646 atk=330 atk%=0.46699999999999997 er=0.6729999999999999 em=606.5 cr=0.124 cd=0.054000000000000006;
-
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
@@ -73,7 +72,7 @@ for let i = 20; i > 0; {
 }
 
 # average DPS	12,900
-# ganyu 	10,100
+# ganyu 	10,000
 # mona 		   900
 # layla		 1,000
 # sayu		   800

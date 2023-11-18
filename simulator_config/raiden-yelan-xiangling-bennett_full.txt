@@ -1,22 +1,22 @@
 raiden char lvl=70/70 cons=0 talent=6,6,6;
 raiden add weapon="thecatch" refine=5 lvl=80/80;
 raiden add set="emblemofseveredfate" count=4;
-raiden add stats def=58 hp=4780 hp%=0.32099999999999995 atk=342 atk%=0.642 er=0.861 em=16 cr=0.47000000000000003 cd=0.319 electro%=0.466;
+raiden add stats def=128 hp=5079 hp%=0.158 atk=311 atk%=0.775 er=0.5309999999999999 em=16 cr=0.427 cd=0.879 electro%=0.466;
 
 yelan char lvl=70/70 cons=1 talent=6,6,6;
 yelan add weapon="favoniuswarbow" refine=2 lvl=80/80;
 yelan add set="emblemofseveredfate" count=4;
-yelan add stats def%=0.19 def=78 hp=5497 hp%=0.875 atk=311 er=0.395 em=140 cr=0.41200000000000003 cd=0.311 hydro%=0.466;
+yelan add stats def%=0.19 def=39 hp=5497 hp%=0.8750000000000001 atk=330 er=0.4590000000000001 em=100 cr=0.47800000000000004 cd=0.34199999999999997 hydro%=0.466;
 
 xiangling char lvl=70/70 cons=2 talent=1,6,6;
 xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
 xiangling add set="emblemofseveredfate" count=4;
-xiangling add stats def%=0.066 def=98 hp=5527 hp%=0.099 atk=397 atk%=0.146 er=0.823 em=128 cr=0.268 cd=0.7 pyro%=0.466;
+xiangling add stats def=98 hp=4780 hp%=0.21000000000000002 atk=395 atk%=0.21 er=0.9199999999999999 em=111 cr=0.29500000000000004 cd=0.7 pyro%=0.466;
 
 bennett char lvl=70/70 cons=3 talent=1,6,6;
 bennett add weapon="favoniussword" refine=1 lvl=80/80;
 bennett add set="noblesseoblige" count=4;
-bennett add stats def%=0.109 def=56 hp=7229 hp%=1.014 atk=346 atk%=0.43700000000000006 er=0.34900000000000003 em=37 cr=0.132 cd=0.116 heal=0.359;
+bennett add stats def%=0.109 def=19 hp=5401 hp%=1.0550000000000002 atk=362 atk%=0.39 er=0.23299999999999998 em=37 cr=0.105 cd=0.116 heal=0.359;
 
 options iteration=1000 swap_delay=30;
 target lvl=70 resist=0.1 hp=1000000000 particle_threshold=250000 particle_drop_count=1 pos=3,0 radius=2;
@@ -72,8 +72,8 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS	18,100
-# raiden	 8,214
-# yelan		 5,000
-# xiangling	 4,400
+# average DPS	19,700
+# raiden	 9,500
+# yelan		 4,500
+# xiangling	 5,100
 # bennett	   400
