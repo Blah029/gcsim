@@ -1,0 +1,1 @@
+{"name":"Skill CA Burst gcsim","targets":[{"weight":1,"path":["charged","fullyAimed"],"hitMode":"avgHit","bonusStats":{}},{"weight":1,"path":["skill","dmg"],"hitMode":"avgHit","bonusStats":{}},{"weight":1,"path":["burst","titanbreaker"],"hitMode":"avgHit","bonusStats":{}},{"weight":12,"path":["burst","stormcluster"],"hitMode":"avgHit","bonusStats":{}}]}
