@@ -8,7 +8,7 @@ yelan add weapon="favoniuswarbow" refine=2 lvl=80/80;
 yelan add set="emblemofseveredfate" count=4;
 yelan add stats def%=0.19 def=39 hp=5497 hp%=0.8750000000000001 atk=330 er=0.4590000000000001 em=100 cr=0.47800000000000004 cd=0.34199999999999997 hydro%=0.466;
 
-xiangling char lvl=70/70 cons=2 talent=1,6,6;
+xiangling char lvl=70/70 cons=6 talent=1,6,6;
 xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
 xiangling add set="emblemofseveredfate" count=4;
 xiangling add stats def=98 hp=4780 hp%=0.21000000000000002 atk=395 atk%=0.21 er=0.9199999999999999 em=111 cr=0.29500000000000004 cd=0.7 pyro%=0.466;
@@ -72,8 +72,8 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS	19,700
-# raiden	 9,500
-# yelan		 4,500
-# xiangling	 5,100
+# average DPS	22,300
+# raiden	 9,300
+# yelan		 4,800
+# xiangling	 7,600
 # bennett	   400

@@ -8,7 +8,7 @@ sara add weapon="favoniuswarbow" refine=2 lvl=80/80;
 sara add set="emblemofseveredfate" count=4;
 sara add stats def%=0.175 def=164 hp=5049 atk=399 atk%=0.7060000000000001 er=0.395 em=161 cr=0.381 cd=0.132 electro%=0.466;
 
-xiangling char lvl=70/70 cons=2 talent=1,6,6;
+xiangling char lvl=70/70 cons=6 talent=1,6,6;
 xiangling add weapon="dragonsbane" refine=1 lvl=80/80;
 xiangling add set="emblemofseveredfate" count=4;
 xiangling add stats def=98 hp=4780 hp%=0.21000000000000002 atk=395 atk%=0.21 er=0.9199999999999999 em=111 cr=0.29500000000000004 cd=0.7 pyro%=0.466;
@@ -69,8 +69,8 @@ for let i = 15; i > 0; {
   }
 }
 
-# average DPS	18,400
-# raiden	11,500
+# average DPS	20,200
+# raiden	11,600
 # sara		 2,500
-# xiangling	 3,900
+# xiangling	 5,600
 # bennett	   400
